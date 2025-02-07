@@ -32,7 +32,7 @@ struct RecipeCardView: View {
                 .padding(.bottom, 1)
                 
                 HStack {
-                    if let youtubeUrl = recipe.youtubeUrl, let videoId = recipe.youtubeVideoId {
+                    if let youtubeUrl = recipe.youtubeUrl, let _ = recipe.youtubeVideoId {
                         HStack {
                             Image(systemName: "play.rectangle.fill")
                                 .foregroundColor(.red)

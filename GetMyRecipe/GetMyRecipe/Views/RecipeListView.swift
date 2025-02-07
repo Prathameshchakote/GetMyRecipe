@@ -71,11 +71,13 @@ struct RecipeListView: View {
                    prompt: "What are you craving for?"
                )
         .onChange(of: viewModel.searchText, {
-            viewModel.updateSearchResults()
+                viewModel.updateSearchResults()
         })
         .refreshable {
             await viewModel.loadRecipes()
         }
+        .transition(.slide)
+        .animation(.easeInOut, value: viewModel.recipes)
         .overlay {
             if viewModel.recipes.isEmpty {
                 ContentUnavailableView(
