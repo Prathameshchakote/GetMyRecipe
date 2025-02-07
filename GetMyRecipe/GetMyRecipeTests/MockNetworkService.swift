@@ -23,7 +23,6 @@ class MockNetworkService: NetworkServiceProtocol {
     }
     
     func fetchImage(from urlString: String) async throws -> Data {
-        // Implement if needed for tests
         return Data()
     }
 }

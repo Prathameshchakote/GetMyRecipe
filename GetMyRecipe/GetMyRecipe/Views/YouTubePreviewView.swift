@@ -41,7 +41,6 @@ struct YouTubePreviewView: View {
     
     private func openYouTubeVideo() {
         
-        // Try to open YouTube app first
         let youtubeAppUrl = URL(string: "youtube://\(videoId)")!
         if UIApplication.shared.canOpenURL(youtubeAppUrl) {
             openURL(youtubeAppUrl)
