@@ -51,6 +51,9 @@ struct RecipeListView: View {
                     }
                 }
             }
+            .onChange(of: viewModel.searchText) {
+                viewModel.updateSearchResults()
+            }
         }
         .task {
             await viewModel.loadRecipes()
@@ -64,12 +67,13 @@ struct RecipeListView: View {
             }
             .buttonStyle(PlainButtonStyle())
         }
+        .padding()
         .listRowSeparator(.hidden, edges: .all)
         .listStyle(.plain)
         .searchable(
-                   text: $viewModel.searchText,
-                   prompt: "What are you craving for?"
-               )
+            text: $viewModel.searchText,
+            prompt: "What are you craving for?"
+        )
         .onChange(of: viewModel.searchText, {
                 viewModel.updateSearchResults()
         })
