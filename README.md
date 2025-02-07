@@ -17,7 +17,9 @@ The app provides a seamless experience for browsing and viewing recipes with the
 * **Error Handling**: Graceful error states and retry mechanisms
 * **Empty States**: Clear feedback when no recipes are available
 
-[Screenshots would be included here in an actual submission]
+## Previews
+
+> <img src="https://github.com/user-attachments/assets/4ad7f4cd-1acf-4942-a5f2-d649c2ee676d" width="150">
 
 ### Focus Areas
 
